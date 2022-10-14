@@ -1,0 +1,18 @@
+.container {
+  border: 5px solid red;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  /* main axis */
+  justify-content: flex-end;
+  /* cross axis */
+  align-items: stretch;
+}
+
+.box {
+  background: blue;
+  height: 100px;
+  color: white;
+  font-size: 30px;
+}
