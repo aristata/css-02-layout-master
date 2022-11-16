@@ -1,0 +1,20 @@
+.parents {
+  border: 5px solid red;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.child {
+  flex-basis: 30%;
+  border: 2px solid black;
+  background: blue;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
