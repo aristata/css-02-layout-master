@@ -6,14 +6,14 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     /* repeat 함수를 사용하면 위와 같은 반복을 줄일 수 있다 */
-    grid-template-rows: 100px repeat(2, 200px) 100px;
+    grid-template-rows: 100px repeat(3, 200px) 100px;
     grid-template-areas:
-          "header header header header"
-          "content content content nav"
-          "content content content nav"
-          "footer footer footer footer";
+          "header header header header header"
+          "nav content content content aside"
+          "nav content content content aside"
+          "footer footer footer footer footer";
 }
 
 .header {
@@ -29,6 +29,11 @@ body {
 .nav {
     background-color: palevioletred;
     grid-area: nav
+}
+
+.aside {
+    background-color: palevioletred;
+    grid-area: aside
 }
 
 .footer {
