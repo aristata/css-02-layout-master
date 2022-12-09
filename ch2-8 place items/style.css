@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  width: 50vh;
+  height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* 수평 배치 */
+  justify-items: center;
+  /* 수직 배치 */
+  align-items: stretch;
+  /* justify 와 align 합친거 */
+  /* place-items: stretch center; */
+}
+
+.header {
+  background-color: palegreen;
+}
+
+.content {
+  background-color: paleturquoise;
+}
+
+.nav {
+  background-color: palevioletred;
+}
+
+.footer {
+  background-color: palegoldenrod;
+}
