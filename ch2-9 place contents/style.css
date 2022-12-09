@@ -1,0 +1,33 @@
+body {
+
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* 수평 배치 */
+  justify-content: end;
+  /* 수직 배치 */
+  align-content: end;
+  /* align(Y) 과 justify(X) 가 합친거 */
+  /* place-content: stretch center; */
+}
+
+.header {
+  background-color: palegreen;
+}
+
+.content {
+  background-color: paleturquoise;
+}
+
+.nav {
+  background-color: palevioletred;
+}
+
+.footer {
+  background-color: palegoldenrod;
+}
