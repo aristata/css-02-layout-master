@@ -1,0 +1,15 @@
+.grid {
+  display: grid;
+  color: white;
+  gap: 5px;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, 100px);
+}
+
+.item:nth-child(odd) {
+  background-color: aquamarine;
+}
+
+.item:nth-child(even) {
+  background-color: plum;
+}
