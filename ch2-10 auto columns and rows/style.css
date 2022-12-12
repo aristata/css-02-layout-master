@@ -1,0 +1,31 @@
+body {
+
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  height: 250vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.header {
+  background-color: palegreen;
+  /* xxx-self 는 자기 자신만 움직인다 */
+  /* align-self: end; */
+  /* justify-self: center; */
+  place-self: end center;
+}
+
+.content {
+  background-color: paleturquoise;
+}
+
+.nav {
+  background-color: palevioletred;
+}
+
+.footer {
+  background-color: palegoldenrod;
+}
