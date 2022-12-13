@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  color: white;
+  gap: 5px;
+  /* 몇개의 행을 가지는지 모르지만, 각 행은 100px 사이즈를 가지게 한다 */
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
+}
+
+.item:nth-child(odd) {
+  background-color: aquamarine;
+}
+
+.item:nth-child(even) {
+  background-color: plum;
+}
+
+.grid1 {
+  /* auto-fill 은 그리드 요소를 정해진 사이즈 크기대로 만들어서 채운다
+      - auto-fill 은 repeat 안에서만 사용할 수 있다
+      - columns 에다 정의하였기 때문에, 그리드 열을 만들어서 채울것이다*/
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid2 {
+  /* auto-fit 은 그리드 요소를 최대한 늘려서 채운다 */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
