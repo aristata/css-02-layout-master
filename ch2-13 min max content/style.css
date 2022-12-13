@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  color: white;
+  gap: 5px;
+  grid-auto-rows: 100px;
+  /*
+    min-content: content 의 최소 크기에 맞춰 그리드 요소의 크기를 조절한다
+    max-content: content 의 최대 크기에 맞춰 그리드 요소의 크기를 조절한다
+    앞서 배운 다양한 함수들과 결합하여 반응형 레이아웃을 만들때 활용할 수 있다
+  */
+  grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+}
+
+.item:nth-child(odd) {
+  background-color: aquamarine;
+}
+
+.item:nth-child(even) {
+  background-color: plum;
+}
