@@ -1,0 +1,26 @@
+@import "_variables";
+
+body {
+  background: peru;
+  a {
+    color: blue;
+  }
+}
+
+h2 {
+  background-color: $myBackground;
+  font-size: $myTitleSize;
+}
+
+.box {
+  margin-top: 20px;
+  &:hover {
+    background-color: lightpink;
+  }
+  h2 {
+    color: $myTitleColor;
+  }
+  button {
+    color: $myButton;
+  }
+}
