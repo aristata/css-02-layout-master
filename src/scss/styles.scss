@@ -1,5 +1,5 @@
 @import "_variables";
-
+@import "_mixins";
 body {
   background: peru;
   a {
@@ -22,5 +22,15 @@ h2 {
   }
   button {
     color: $myButton;
+  }
+}
+
+a {
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+    @include linkStyle(true);
+  }
+  &:nth-child(even) {
+    @include linkStyle(false);
   }
 }

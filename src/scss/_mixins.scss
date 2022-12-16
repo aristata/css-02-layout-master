@@ -1,0 +1,9 @@
+@mixin linkStyle($isOdd) {
+  text-decoration: none;
+  display: block;
+  @if $isOdd {
+    color: blue;
+  } @else {
+    color: red;
+  }
+}
