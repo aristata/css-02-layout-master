@@ -45,3 +45,17 @@ body {
   @extend %button;
   border: none;
 }
+
+.contentEx h1 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 60px;
+    color: blue;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
+}
