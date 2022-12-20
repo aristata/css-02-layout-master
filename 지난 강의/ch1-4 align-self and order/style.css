@@ -1,0 +1,29 @@
+.container {
+  border: 5px solid red;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  /* main axis */
+  justify-content: space-around;
+  /* cross axis */
+  align-items: flex-start;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  background: blue;
+  color: white;
+  font-size: 30px;
+}
+
+.box:nth-child(2) {
+  align-self: center;
+  order: 1;
+}
+
+.box:nth-child(1) {
+  align-self: flex-end;
+}
