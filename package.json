@@ -2,7 +2,7 @@
   "name": "scss-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "dev": "gulp dev"
+    "start": "gulp dev"
   },
   "type": "module",
   "license": "MIT",
