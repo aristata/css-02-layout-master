@@ -10,7 +10,7 @@ const sass = gulpSass(sass2);
 const routes = {
   css: {
     watch: "src/scss/*",
-    src: "src/scss/styles.scss",
+    src: "src/scss/*.scss",
     dest: "dist/css"
   }
 };

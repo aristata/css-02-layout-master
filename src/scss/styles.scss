@@ -1,123 +1,213 @@
 @import "reset";
 @import "_variables";
+@import "_titles";
+@import url("https://fonts.googleapis.com/css2?family=Caladea:wght@400;700&family=Montserrat:wght@400;500&display=swap");
 
 body {
   height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Caladea";
+  background-color: $white;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-header {
+nav {
+  width: calc(100% - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
   position: fixed;
   top: 0;
-  left: 0;
   background-color: $white;
-  width: 33%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: $red;
-  .hgroup {
-    padding: 93px 0 0 72px;
-    h1 {
-      font-size: 85px;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      margin-bottom: 72px;
+  div {
+    height: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    span {
+      @extend %miniTitle;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 48px;
+      height: 48px;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
     }
   }
-  .bottom {
-    padding: 72px;
-    h3 {
-      font-size: 24px;
-      font-weight: 400;
-      margin-bottom: 30px;
-      width: 75%;
-      line-height: 1.2;
-    }
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      margin-bottom: 30px;
-      width: 80%;
-      line-height: 1.2;
-      text-align: justify;
-    }
-    nav {
-      width: 70%;
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-        li {
-          cursor: pointer;
-          font-size: 14px;
-          font-weight: 500;
-          color: black;
-          opacity: 0.5;
-          padding-bottom: 2px;
-          border-bottom: 1px solid rgba(0, 0, 0, 1);
-          margin-right: 12px;
-          margin-bottom: 10px;
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-      p {
-        font-size: 11px;
-        font-weight: 500;
-        color: black;
-        opacity: 0.5;
-        width: 100%;
-      }
-    }
+  .first_div {
+    justify-content: flex-start;
+  }
+  .last_div {
+    justify-content: flex-end;
   }
 }
 
 main {
-  margin-left: 33%;
-  .movie {
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1) 5%,
-        transparent,
-        transparent,
-        transparent,
-        transparent
-      )
-      $red;
-    height: 100vh;
+  margin-top: 150px;
+}
+
+.shop_now {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(128, 125, 125, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("/src/imgs/17.jpg");
+  height: 70%;
+  margin: 0px 50px 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .label {
+    @extend %miniTitle;
+    color: $white;
+    padding-bottom: 20px;
+  }
+  .content {
+    width: 45%;
+    color: $white;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-bottom: 80px;
+  }
+  a {
+    text-decoration: none;
+    border: 2px solid $white;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    @extend %miniTitle;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: #111;
+    }
+  }
+}
+
+.book_now {
+  margin: 0px 50px 80px 50px;
+  display: flex;
+  flex-direction: row;
+  .content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    .wrapper {
-      width: 80%;
-      display: flex;
-      flex-direction: column;
-      .movie__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 25px;
-        h4 {
-          font-size: 32px;
-          text-transform: uppercase;
-        }
-        h5 {
-          letter-spacing: 2px;
-        }
+    background-color: $cardBg;
+    padding-left: 50px;
+    padding-right: 50px;
+    p {
+      font-size: 36px;
+      font-weight: 300;
+      text-align: center;
+      padding-bottom: 80px;
+    }
+    a {
+      text-decoration: none;
+      border: 2px solid $black;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      @extend %miniTitle;
+      color: $black;
+      &:hover {
+        background-color: $black;
+        color: $white;
       }
     }
-    img {
-      width: 100%;
-      box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0, 0, 0, 0.06),
-        inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.add_to_cart {
+  margin: 0px 50px 80px 50px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    span {
+      @extend %miniTitle;
+    }
+    p {
+      font-size: 36px;
+      font-weight: 300;
+    }
+  }
+  .items {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: space-between;
+    .item {
+      width: 30%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      .product_image {
+        background-image: url("/src/imgs/2.png");
+        width: 300px;
+        height: 300px;
+        padding-bottom: 50px;
+      }
+      .category {
+        @extend %miniTitle;
+        span {
+          border-left: 2px solid burlywood;
+          padding-left: 10px;
+          margin-left: 10px;
+          color: burlywood;
+        }
+      }
+      .product {
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .price {
+        font-size: 16px;
+        color: gray;
+        padding-bottom: 30px;
+      }
+      a {
+        text-decoration: none;
+        border: 1px solid $black;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        @extend %miniTitle;
+        color: $black;
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
     }
   }
 }
