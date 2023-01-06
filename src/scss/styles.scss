@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-  width: calc(90%);
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -262,6 +262,42 @@ main {
     height: 600px;
     background-color: #dee8e9;
 
+    span {
+      @extend %miniTitle;
+      padding: 20px;
+    }
+
+    p {
+      width: 60%;
+      padding: 20px;
+      font-size: 30pt;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      border: 1px solid black;
+      @extend %miniTitle;
+      padding: 20px 40px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.blog_cards {
+  margin: 5%;
+  display: grid;
+  grid-template: repeat(3, 600px) / repeat(2, 50%);
+  img {
+    height: 600px;
+  }
+  div {
+    height: 600px;
+    background-color: #f3ede8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     span {
       @extend %miniTitle;
       padding: 20px;
